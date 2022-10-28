@@ -16,6 +16,9 @@ function iniciarJuego() {
 
     let botonTierra = document.getElementById('boton-tierra')
     botonTierra.addEventListener('click', ataqueTierra)
+
+    let botonReiniciar = document.getElementById('boton-reiniciar')
+    botonReiniciar.addEventListener('click', reiniciarJuego)
 }
 
 
@@ -143,6 +146,10 @@ function crearMensajeFinal(resultadoFinal) {
     parrafo.innerHTML = resultadoFinal
     sectionMensajes.appendChild(parrafo)
 
+}
+
+function reiniciarJuego(){
+    location.reload()
 }
 
 
