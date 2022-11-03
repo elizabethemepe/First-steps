@@ -5,15 +5,19 @@ let vidasEnemigo = 3
 
 
 function iniciarJuego() {
+    let sectionSeleccionarAtaque = document.getElementById('seleccionar-ataque')
+    sectionSeleccionarAtaque.style.display = 'none'
+
+    let sectionReiniciar = document.getElementById('reiniciar')
+    sectionReiniciar.style.display = 'none'
+
     let botonMascotaJugador = document.getElementById('boton-mascota')
     botonMascotaJugador.addEventListener('click', seleccionarMascotaJugador)
 
     let botonFuego = document.getElementById('boton-fuego')
     botonFuego.addEventListener('click', ataqueFuego)
-
     let botonAgua = document.getElementById('boton-agua')
     botonAgua.addEventListener('click', ataqueAgua)
-
     let botonTierra = document.getElementById('boton-tierra')
     botonTierra.addEventListener('click', ataqueTierra)
 
@@ -23,6 +27,15 @@ function iniciarJuego() {
 
 
 function seleccionarMascotaJugador() {
+    let sectionSeleccionarMascota = document.getElementById('seleccionar-mascota')
+    sectionSeleccionarMascota.style.display = 'none'
+
+
+    
+    let sectionSeleccionarAtaque = document.getElementById('seleccionar-ataque')
+    sectionSeleccionarAtaque.style.display = 'block'
+
+
     let inputHipodoge = document.getElementById('hipodoge')
     let inputCapipepo = document.getElementById('capipepo')
     let inputRatigueya = document.getElementById('ratigueya')
@@ -145,6 +158,16 @@ function crearMensajeFinal(resultadoFinal) {
     let parrafo = document.createElement('p')
     parrafo.innerHTML = resultadoFinal
     sectionMensajes.appendChild(parrafo)
+
+    let botonFuego = document.getElementById('boton-fuego')
+    botonFuego.disabled = true
+    let botonAgua = document.getElementById('boton-agua')
+    botonAgua.disabled = true
+    let botonTierra = document.getElementById('boton-tierra')
+    botonTierra.disabled = true
+
+    let sectionReiniciar = document.getElementById('reiniciar')
+    sectionReiniciar.style.display = 'block'
 
 }
 
