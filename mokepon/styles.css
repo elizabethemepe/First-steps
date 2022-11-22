@@ -74,3 +74,13 @@ input {
     color: white;
     font-family: 'Poppins', sans-serif;
 }
+
+#mensajes{
+    width: 280px;
+    background: #FFDDD2;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+}
