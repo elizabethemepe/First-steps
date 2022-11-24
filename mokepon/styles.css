@@ -82,5 +82,12 @@ input {
     margin-top: 20px;
     border-radius: 20px;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#boton-reiniciar{
+    border: none;
+    color:#FF8DC7;
+    font-family: 'Poppins', sans-serif;
 }
